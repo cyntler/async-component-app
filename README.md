@@ -2,14 +2,22 @@
 
 A simple recruitment application with a special Async component.
 
-## How to run the application?
+## How to use?
+
+The first step is to install the dependencies:
 
 ```sh
-npm i && npm start
+npm i
 ```
 
-## How to run unit tests?
+Then, to start the application:
 
 ```sh
-npm i && npm test
+npm start
+```
+
+You can also run unit tests with the command:
+
+```sh
+npm test
 ```
