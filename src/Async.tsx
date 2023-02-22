@@ -1,12 +1,6 @@
-import {
-  FC,
-  FunctionComponent,
-  PropsWithChildren,
-  ReactNode,
-  useEffect,
-  useRef,
-  useState,
-} from 'react';
+import { ReactNode, useEffect, useRef, useState } from 'react';
+
+import { LOADING_CONTENT } from './models';
 
 enum AsyncStatus {
   loading,
@@ -48,7 +42,7 @@ export default function Async<T>({ action, children }: AsyncProps<T>) {
   }, []);
 
   if (status === AsyncStatus.loading) {
-    return <div>Wczytywanie...</div>;
+    return <div>{LOADING_CONTENT}</div>;
   }
 
   if (status === AsyncStatus.error) {

@@ -1,5 +1,7 @@
 import { render, screen, waitFor } from '@testing-library/react';
+
 import Async from '../Async';
+import { LOADING_CONTENT } from '../models';
 
 describe('<Async />', () => {
   it('renders Promise resolved data when success', async () => {
@@ -17,7 +19,7 @@ describe('<Async />', () => {
       </Async>,
     );
 
-    expect(screen.getByText('Wczytywanie...')).toBeDefined();
+    expect(screen.getByText(LOADING_CONTENT)).toBeDefined();
 
     await waitFor(() => {
       expect(screen.getByText(promiseResolveValue)).toBeDefined();
@@ -39,7 +41,7 @@ describe('<Async />', () => {
       </Async>,
     );
 
-    expect(screen.getByText('Wczytywanie...')).toBeDefined();
+    expect(screen.getByText(LOADING_CONTENT)).toBeDefined();
 
     await waitFor(() => {
       expect(screen.getByText(promiseRejectValue)).toBeDefined();
