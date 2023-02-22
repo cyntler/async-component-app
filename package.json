@@ -1,6 +1,11 @@
 {
   "name": "async-component-app",
   "private": true,
+  "description": "A simple recruitment application with a special Async component.",
+  "keywords": [
+    "react-app",
+    "recruitment-task"
+  ],
   "version": "0.0.0",
   "type": "module",
   "scripts": {
